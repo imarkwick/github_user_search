@@ -28,9 +28,9 @@ describe('GitUserSearchController', function() {
 		}];
 
 		it('should display search results', function() {
+			scope.searchTerm = 'hello';
+			scope.doSearch();
 			expect(scope.searchResult.items).toEqual(items);
 		});
-
 	});
-
 });

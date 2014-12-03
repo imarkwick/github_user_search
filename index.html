@@ -12,7 +12,7 @@
     <div>
       <form class="form-horizontal">
         <input type="text" >
-        <button class="btn">Search</button>
+        <button class="btn" ng-click="doSearch()">Search</button>
       </form>
       <ul class="list-group" ng-repeat="user in searchResult.items">
         <li>
@@ -20,16 +20,6 @@
           <a ng-href="{{user.html_url}}">{{user.login}}</a>
         </li>
       </ul>
-<!--       <ul class="list-group">
-        <li class="list-group-item">
-          <img src="https://avatars3.githubusercontent.com/u/8904564?v=3&s=460">
-          <a href="https://github.com/imarkwick">imarkwick</a>
-        </li>
-        <li class="list-group-item">
-          <img src="https://avatars3.githubusercontent.com/u/8865177?v=3&s=460">
-          <a href="https://github.com/ejbyne">ejbyne</a>
-        </li>
-      </ul> -->
     </div>
     <script src="js/app.js"></script>
     <script src="js/gitUserSearchController.js"></script>
