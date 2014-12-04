@@ -14,6 +14,9 @@
         <input type="text" ng-model="searchTerm" ng-change="doSearch()" ng-model-options="{ updateOn: 'default blur', debounce: {'default': 500, 'blur': 50} }">
         <button class="btn" ng-click="doSearch()">Search</button>
       </form>
+      <p id="search_for" style="display: none">You searched for: </p>
+      <p>{{ searchTerm }}</p>
+      <br>
       <ul class="list-group" ng-repeat="user in searchResult.items">
         <li>
           <img ng-src="{{user.avatar_url}}&s=50">
