@@ -6,7 +6,7 @@ githubUserSearch.controller('GitUserSearchController', function($scope, $resourc
     $scope.searchResult = searchResource.get({
       q: $scope.searchTerm
     });
-    $scope.$apply();
+    // $scope.$apply();
   	// $scope.searchResult = {
 	  // 	"items": [{
 	  //     "login": "tansaku",
