@@ -10,13 +10,15 @@
   </head>
 
   <body ng-controller="GitUserSearchController">
+    <h1>Teacher Report Card</h1>
     <div>
       <form class="form-horizontal">
-        <input type="text" ng-model="searchTerm" ng-change="doSearch()" ng-model-options="{ updateOn: 'default blur', debounce: {'default': 500, 'blur': 50} }">
+        Please enter username: <input type="text" ng-model="searchTerm" ng-change="doSearch()" ng-model-options="{ updateOn: 'default blur', debounce: {'default': 500, 'blur': 50} }">
         <button class="btn" ng-click="doSearch()">Search</button>
       </form>
       <p id="search_for" style="display: none">You searched for: </p>
       <p>{{ searchTerm }}</p>
+      <p>{{ repoCount }}</p>
       <br>
       <ul class="list-group" ng-repeat="user in searchResult.items">
         <li>
@@ -25,6 +27,13 @@
         </li>
       </ul>
     </div>
+    
+    <div id="repos" style="display: none">
+      <p>Bookmark Manager</p>
+      <p>Total commits: {{ repoCommitCount }}</p>
+      <p>{{ searchTerm }}'s commits: {{ userCommitCount }}</p>
+    </div>
+
     <script src="js/app.js"></script>
     <script src="js/gitUserSearchController.js"></script>
   </body>
