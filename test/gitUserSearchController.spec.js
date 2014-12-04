@@ -40,7 +40,6 @@ describe('GitUserSearchController', function() {
 		it('should display search results', function() {
 			scope.searchTerm = 'hello';
 			scope.doSearch();
-			// scope.$apply();
 			httpBackend.flush();
 			expect(scope.searchResult.items).toEqual(items);
 		});
