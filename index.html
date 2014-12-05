@@ -29,10 +29,18 @@
     </div>
     
     <div id="repos" style="display: none">
-      <p>Bookmark Manager</p>
+      <ul class="list-group" ng-repeat="repo in repos">
+        <li >Repo: {{ repo.name }}
+          <li>Total commits: {{ repo.totalCommits }}</li>
+          <li>{{ searchTerm }}'s commits: {{ repo.userCommits }}</li>
+        </li>
+      </ul>
+    </div>
+      
+<!--       <p>Bookmark Manager</p>
       <p>Total commits: {{ repoCommitCount }}</p>
       <p>{{ searchTerm }}'s commits: {{ userCommitCount }}</p>
-    </div>
+    </div> -->
 
     <script src="js/app.js"></script>
     <script src="js/gitUserSearchController.js"></script>
