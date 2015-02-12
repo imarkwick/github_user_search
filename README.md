@@ -37,7 +37,7 @@ $ cd github_user_search
 $ open index.html
 ```
 
-# Pair programmer:
+## Pairing with:
 
 [Ed Byne](https://github.com/ejbyne)
 
